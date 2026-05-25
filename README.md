@@ -82,3 +82,17 @@ resources
 ```bash
 mvn clean test
 ```
+## Test Result
+
+```text
+Tests run: 11
+Failures: 0
+Errors: 0
+Skipped: 0
+
+BUILD SUCCESS
+```
+
+## Screenshots
+
+Execution screenshots are available in the screenshots folder.
