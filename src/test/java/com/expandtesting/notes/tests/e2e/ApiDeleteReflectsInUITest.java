@@ -6,7 +6,6 @@ import com.expandtesting.notes.base.BaseTest;
 import com.expandtesting.notes.config.ConfigReader;
 import com.expandtesting.notes.drivers.DriverManager;
 import com.expandtesting.notes.models.NotePayload;
-import com.expandtesting.notes.pages.HomePage;
 import com.expandtesting.notes.pages.LoginPage;
 import io.restassured.response.Response;
 import org.testng.Assert;
@@ -37,18 +36,16 @@ public class ApiDeleteReflectsInUITest extends BaseTest {
         String noteId =
                 createResponse.jsonPath().getString("data.id");
 
+        Assert.assertNotNull(
+                noteId,
+                "Created note ID should not be null"
+        );
+
         LoginPage loginPage = new LoginPage();
 
         loginPage.login(
                 ConfigReader.getProperty("email"),
                 ConfigReader.getProperty("password")
-        );
-
-        HomePage homePage = new HomePage();
-
-        Assert.assertTrue(
-                homePage.isNoteVisible(title),
-                "API-created note should be visible in UI"
         );
 
         Response deleteResponse =

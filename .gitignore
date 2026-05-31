@@ -35,5 +35,20 @@ build/
 ### VS Code ###
 .vscode/
 
+### Screenshots ###
+screenshots/
+
+### Logs ###
+*.log
+hs_err_pid*.log
+replay_pid*.log
+
+### Artifacts ###
+artifacts/
+
+### Duplicate docs ###
+docs/* (1)*.xlsx
+docs/* (3)*.xlsx
+
 ### Mac OS ###
 .DS_Store

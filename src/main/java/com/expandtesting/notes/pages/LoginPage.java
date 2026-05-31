@@ -8,13 +8,13 @@ import org.openqa.selenium.By;
 public class LoginPage {
 
     private final By emailInput =
-            By.id("email");
+            By.cssSelector("input[data-testid='login-email']");
 
     private final By passwordInput =
-            By.id("password");
+            By.cssSelector("input[data-testid='login-password']");
 
     private final By loginButton =
-            By.cssSelector("button[type='submit']");
+            By.cssSelector("button[data-testid='login-submit']");
 
     public void login(String email, String password) {
 

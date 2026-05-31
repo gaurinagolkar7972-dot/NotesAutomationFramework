@@ -10,9 +10,8 @@ public class PerformanceUtil {
 
     public static void assertResponseTime(long actualTimeMs, String apiName) {
 
-        long maxAllowedMs = Long.parseLong(
-                ConfigReader.getProperty("api.response.threshold")
-        );
+        String threshold = ConfigReader.getProperty("api.response.threshold");
+        long maxAllowedMs = threshold != null ? Long.parseLong(threshold) : 5000L;
 
         Assert.assertTrue(
                 actualTimeMs < maxAllowedMs,

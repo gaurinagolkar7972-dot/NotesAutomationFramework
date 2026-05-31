@@ -12,7 +12,7 @@ public class TokenManager {
     private TokenManager() {
     }
 
-    public static String getToken() {
+    public static synchronized String getToken() {
 
         if (token == null) {
 

@@ -21,7 +21,7 @@ public class LogoutTest extends BaseTest {
         );
 
         By logoutButton =
-                By.xpath("//button[contains(.,'Logout')]");
+                By.cssSelector("[data-testid='logout']");
 
         WaitUtils.clickable(logoutButton).click();
 

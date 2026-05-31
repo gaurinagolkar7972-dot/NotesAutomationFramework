@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 public class HomePage {
 
     private final By logoutButton =
-            By.xpath("//button[contains(.,'Logout') or contains(.,'Log out')]");
+            By.cssSelector("[data-testid='logout']");
 
     private final By addNoteButton =
             By.cssSelector("[data-testid='add-new-note']");
